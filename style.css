@@ -57,9 +57,6 @@ body{
     top: 0;
     left: 0;
 }
-.aqua{
-    color: aqua;
-}
 .dropdown__menu{
     visibility: hidden;
     opacity: 1;
@@ -106,7 +103,8 @@ body{
 .btn--top{
     background-color: var(--bg-color);
     font-size: 1.4rem;
-    border:transparent
+    border:transparent;
+    color: aquamarine;
 }
 .btn{
     width: 100px;
