@@ -29,7 +29,7 @@ body{
     background-color: var(--bg-color);
     height: 100svh;
     font-size: 2rem;
-    font-family: cursive;
+    font-family: 'Space Mono', monospace;
     position: relative;
     display: grid;
 }
@@ -54,6 +54,7 @@ button{font-family: inherit;}
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
 }
 .dropdown__btn{
     margin-left:1.2rem;
@@ -65,8 +66,9 @@ button{font-family: inherit;}
 .dropdown__menu{
     visibility: hidden;
     opacity: 1;
-    width: 50vh;
-    margin-inline:1.2rem;
+    width: 80%;
+    /* padding: 2rem ; */
+    margin-inline:auto;
     background-color:var(--bg-color);
     color: #EBF2FA;
     border-radius: 10px;

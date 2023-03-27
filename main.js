@@ -1,6 +1,6 @@
 class TicTacToe{
     constructor(){
-        this.player = {player_1:"player_1",player_2:"player_2"};
+        this.player = {player_1:"player1",player_2:"player2"};
         this.marker = {player_1:'X',player_2:'O'};
         this.color = {player_1:'#5BC0EB',player_2:'#FF3864'};
         this.playerMoves = {
@@ -98,7 +98,7 @@ const game = new TicTacToe();
 const btnConatiner = document.querySelector("#btn-container");
 let boardBtn = btnConatiner.querySelectorAll("button");
 let display = document.querySelector(".display");
-let displayMessage = `${game.player["player_1"]} VS ${game.player["player_2"]}`;
+let displayMessage = `${game.player["player_1"]}-VS-${game.player["player_2"]}`;
 display.textContent = displayMessage;
 
 
