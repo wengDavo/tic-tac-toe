@@ -67,7 +67,6 @@ button{font-family: inherit;}
     visibility: hidden;
     opacity: 1;
     width: 80%;
-    /* padding: 2rem ; */
     margin-inline:auto;
     background-color:var(--bg-color);
     color: #EBF2FA;
@@ -119,7 +118,7 @@ button{font-family: inherit;}
     content: "\2015"; 
     top: 50%;
     left: 50%;
-    transform: translate(-40%, -40%) rotate(130deg);
+    transform: translate(-50%, -55%) rotate(-20deg);
     filter: var(--invert);
 }
 .tilt-line-left{
@@ -128,7 +127,9 @@ button{font-family: inherit;}
 .tilt-line-left::before{
     position: absolute;
     content: "\2015"; 
-    transform: translate(-25%) rotate(-130deg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%) rotate(20deg);
     filter: var(--invert);
 }
 .vertical-line{
@@ -139,16 +140,13 @@ button{font-family: inherit;}
     content: "\2015"; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-30%, -50%) rotate(90deg);
     filter: var(--invert);
 }
 
 
 .border{
     border-color:var(--outline-color);
-}
-.aqua{
-    border-color: aqua;
 }
 .border--left-col{
     border-left: transparent;
@@ -166,8 +164,6 @@ button{font-family: inherit;}
 .border--bottom-row{
    border-bottom: transparent;
 }
-
-
 
 .alert{
     color: red;
