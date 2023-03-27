@@ -102,7 +102,7 @@ resetGame = ()=>{
     game.countWin['player_2'] = 0;
 }
 dropDownBtn.addEventListener("click",()=>{toggleMenu();});
-dropDownMenu.addEventListener("click",(e)=>{toggleMenu();});
+dropDownMenu.addEventListener("click",()=>{toggleMenu();});
 resetBtn.addEventListener("click",()=>{resetGame();})
 
 // BOARD
@@ -112,7 +112,8 @@ let display = document.querySelector(".display");
 let displayMessage = `${game.player["player_1"]}-VS-${game.player["player_2"]}`;
 display.textContent = displayMessage;
 
-btnConatiner.addEventListener('click',(e)=>{
+btnConatiner.addEventListener('click',(e)=>{playGame(e)});
+playGame = (e) => {
    let curIdx = game.internalCounter();
    let [btn, curPlayer] = [e.target, `player_${curIdx}`];
    let color,delay;
@@ -208,5 +209,5 @@ btnConatiner.addEventListener('click',(e)=>{
                 game.gameReset(boardBtn);
             },delay);           
     }
-});
+}
 
