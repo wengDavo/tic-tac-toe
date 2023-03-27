@@ -8,8 +8,8 @@ input[type=text]{
     border-radius: 5px;
     border: transparent;
 }
-/* ///////////////////////////////// */
-
+button{font-family: inherit;
+        cursor: pointer;}
 /* ///////////////////////////////// */
 /* VARIABLES */
 /* ///////////////////////////////// */
@@ -19,54 +19,50 @@ input[type=text]{
     --invert:invert(100%);
 }
 /* ///////////////////////////////// */
-
-/* ///////////////////////////////// */
 /* STRUCTURE */
 /* ///////////////////////////////// */
 /* */
 body{
-    /* margin: 3rem 0; */
     background-color: var(--bg-color);
     height: 100svh;
     font-size: 2rem;
     font-family: 'Space Mono', monospace;
-    position: relative;
-    display: grid;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 6rem;
 }
-button{font-family: inherit;}
-
-#board{
+.top{
+    position: relative;
+    margin-inline: 1rem;
+}
+.board{
     display: grid;
     place-content: center;
     gap: 4rem;
 }
-.display{
-    width: 100%;
-    height: 80px;
-    border: 1px solid var(--outline-color);
-    display: grid;
-    place-content: center;
-    color: #fff;
-    font-size: 2rem;
+/* /* ///////////////////////////////// */
+/* ///////////////////////////////// */
+/* 
+/* ///////////////////////////////// */
+/* */ 
+.reset{
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .dropdown{
     z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
 }
-.dropdown__btn{
-    margin-left:1.2rem;
-    border: transparent;
-    font-size: 1.4rem;
-    background-color: var(--bg-color);
+.aqua{
+    color: aqua;
 }
-
 .dropdown__menu{
     visibility: hidden;
     opacity: 1;
-    width: 80%;
     margin-inline:auto;
     background-color:var(--bg-color);
     color: #EBF2FA;
@@ -83,14 +79,35 @@ button{font-family: inherit;}
     visibility: visible;
     opacity: 1;
 }
-.rotate{
+.rotate-back{
     transform: rotate(720deg);
     transition: 1s ease;
+}
+
+.rotate-front{
+    transform: rotate(-720deg);
+    transition: 1s ease;
+}
+.display{
+    width: 100%;
+    height: 80px;
+    border: 1px solid var(--outline-color);
+    display: grid;
+    place-content: center;
+    color: #fff;
+    font-size: 2rem;
 }
 /* ///////////////////////////////// */
 /* UTILITIES */
 /* ///////////////////////////////// */
-/* */
+/*  */
+/* BUTTON */
+/*  */
+.btn--top{
+    background-color: var(--bg-color);
+    font-size: 1.4rem;
+    border:transparent
+}
 .btn{
     width: 100px;
     height: 100px;
@@ -99,6 +116,9 @@ button{font-family: inherit;}
     font-size: 3.5rem;
     position: relative;
 }
+/*  */
+/* LINES */
+/*  */
 .horizontal-line{
     display: inline;
 } 
@@ -143,8 +163,9 @@ button{font-family: inherit;}
     transform: translate(-30%, -50%) rotate(90deg);
     filter: var(--invert);
 }
-
-
+/*  */
+/* BORDER */
+/*  */
 .border{
     border-color:var(--outline-color);
 }
@@ -164,7 +185,9 @@ button{font-family: inherit;}
 .border--bottom-row{
    border-bottom: transparent;
 }
-
+/*  */
+/* ANIMATIONS */
+/*  */
 .alert{
     color: red;
 }

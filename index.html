@@ -12,16 +12,21 @@
     <title>TicTacToe</title>
 </head>
 <body>
-    <section class="dropdown">
-        <button class="dropdown__btn" id="dropdown__btn"><span>SCOREBOARD</span><i class="material-symbols-outlined" id="settings-icon">
-            scoreboard
-        </i></button>
-        <div class="dropdown__menu" id="dropdown__menu">
-            <p id="player_1-score">PLAYER 1:</p>
-            <p id="player_2-score">PLAYER 2:</p>
-        </div>
+    <section class="top">
+        <section class="dropdown">
+            <button class="btn--top" id="dropdown--btn"><span>SCOREBOARD</span><i class="material-symbols-outlined" id="settings-icon">
+                scoreboard
+            </i></button>
+            <div class="dropdown__menu" id="dropdown__menu">
+                <p id="player_1-score">PLAYER 1:</p>
+                <p id="player_2-score">PLAYER 2:</p>
+            </div>
+        </section>
+        <section class="reset">
+            <button id="reset--btn" class="btn--top"><i class="material-symbols-outlined aqua" id="reset-icon">restart_alt</i></button>
+        </section>
     </section>
-    <section id="board">
+    <section class="board">
         <section>
             <div class="display"></div>
         </section>

@@ -78,29 +78,39 @@ class TicTacToe{
         });
     }
 }
+// GAME LOGIC
+const game = new TicTacToe();
 
-
-const dropDownBtn = document.querySelector("#dropdown__btn");
+// ICONS
+const dropDownBtn = document.querySelector("#dropdown--btn");
+const resetBtn = document.querySelector("#reset--btn");
 const dropDownMenu = document.querySelector("#dropdown__menu");
-const settingsIcon = document.querySelector("#settings-icon");
+const scoreIcon = document.querySelector("#settings-icon");
+const resetIcon = document.querySelector("#reset-icon");
 let player_1_score = dropDownMenu.querySelector("#player_1-score")
 let player_2_score = dropDownMenu.querySelector("#player_2-score")
 toggleMenu =()=>{
     dropDownMenu.classList.toggle("show");
-    settingsIcon.classList.toggle("rotate");
+    scoreIcon.classList.toggle("rotate-back");
     player_1_score.textContent = `Player 1:${game.countWin['player_1']}`;
     player_2_score.textContent = `Player 2:${game.countWin['player_2']}`;
 }
-dropDownBtn.addEventListener("click",()=>{toggleMenu()});
+resetGame = ()=>{
+    resetIcon.classList.toggle("rotate-front")
+    game.gameReset(boardBtn);
+    game.countWin['player_1'] = 0;
+    game.countWin['player_2'] = 0;
+}
+dropDownBtn.addEventListener("click",()=>{toggleMenu();});
 dropDownMenu.addEventListener("click",(e)=>{toggleMenu();});
+resetBtn.addEventListener("click",()=>{resetGame();})
 
-const game = new TicTacToe();
+// BOARD
 const btnConatiner = document.querySelector("#btn-container");
 let boardBtn = btnConatiner.querySelectorAll("button");
 let display = document.querySelector(".display");
 let displayMessage = `${game.player["player_1"]}-VS-${game.player["player_2"]}`;
 display.textContent = displayMessage;
-
 
 btnConatiner.addEventListener('click',(e)=>{
    let curIdx = game.internalCounter();
