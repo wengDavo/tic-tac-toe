@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<body>
+    <section class="dropdown">
+        <button class="dropdown__btn" id="dropdown__btn"><i class="material-symbols-outlined" id="settings-icon">
+            scoreboard
+        </i></button>
+        <div class="dropdown__menu" id="dropdown__menu">
+            <p id="player_1-score">PLAYER 1:</p>
+            <p id="player_2-score">PLAYER 2:</p>
+        </div>
+    </section>
+    <section id="board">
+        <section>
+            <div class="display"></div>
+        </section>
+        <section id="btn-container">
+            <article class="first-row">
+                <button class="btn border border--left-col" value="1">&nbsp;</button>
+                <button class="btn border border--middle-col" value="2">&nbsp;</button>
+                <button class="btn border border--right-col" value="3">&nbsp;</button>
+            </article>
+            <article class="second-row">
+                <button class="btn border border--left-col" value="4">&nbsp;</button>
+                <button class="btn border border--middle-col" value="5">&nbsp;</button>
+                <button class="btn border border--right-col" value="6">&nbsp;</button>
+            </article>
+            <article class="third-row">
+                <button class="btn border border--left-col border--bottom-row" value="7">&nbsp;</button>
+                <button class="btn border border--middle-col border--bottom-row" value="8">&nbsp;</button>
+                <button class="btn border border--right-col border--bottom-row" value="9">&nbsp;</button>
+            </article>
+        </section>
+    </section>
+</body>
+<script src="main.js"></script>
+</html>
